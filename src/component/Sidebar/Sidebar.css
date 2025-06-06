@@ -1,0 +1,101 @@
+.sidebar {
+  height: 100vh;
+  padding: 20px 10px;
+  background-color: #f9f9fb;
+  color: #222;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+  box-shadow: 1px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar.expanded {
+  width: 250px;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.menu-icon-wrapper {
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.new-chat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #dce6ff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar.dark .new-chat {
+  background-color: #2a2a2a;
+}
+
+.new-chat:hover {
+  background-color: #bfd6ff;
+}
+
+.recent-section {
+  margin-top: 10px;
+}
+
+.section-title {
+  font-size: 13px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.recent-entry,
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.recent-entry:hover,
+.sidebar-item:hover {
+  background-color: #e0e7ff;
+}
+
+.sidebar.dark .recent-entry:hover,
+.sidebar.dark .sidebar-item:hover {
+  background-color: #333;
+}
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Optional: dark theme for entire body */
+body.dark-theme {
+  background-color: #121212;
+  color: #eaeaea;
+}
